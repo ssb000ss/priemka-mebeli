@@ -1,5 +1,5 @@
 
-const CACHE = 'priemka-7ef6dc2b94';
+const CACHE = 'priemka-1f7d393be9';
 const ASSETS = ['./', 'index.html', 'manifest.webmanifest', 'icon-180.png'];
 
 self.addEventListener('install', e => {

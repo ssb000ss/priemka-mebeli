@@ -180,8 +180,22 @@ input {
   background: var(--sheet);
   border: 1px solid var(--rule);
   display: flex; align-items: center; justify-content: center;
+  overflow: visible;
 }
 .plate .size { font-size: 13px; color: var(--ink-2); }
+/* подписи сторон снаружи прямоугольника: две серые кромки различаются
+   только по названию, поэтому важно видеть, какая полоса какая сторона */
+.pl {
+  position: absolute;
+  font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+  font-size: 11px; font-weight: 700; color: var(--ink-2);
+}
+.pl-L1 { top: -19px; left: 50%; transform: translateX(-50%); }
+.pl-L2 { bottom: -19px; left: 50%; transform: translateX(-50%); }
+ /* короткие стороны подписываются внутри: у вытянутых деталей схема
+    занимает всю ширину и снаружи подписи обрезались бы краем экрана */
+.pl-W1 { left: 15px; top: 50%; transform: translateY(-50%); }
+.pl-W2 { right: 15px; top: 50%; transform: translateY(-50%); }
 .band { position: absolute; display: block; }
 /* L1/L2 — стороны длиной «длина» (сверху и снизу),
    W1/W2 — длиной «ширина» (слева и справа) */
@@ -10348,6 +10362,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10367,6 +10382,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10386,6 +10402,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10405,6 +10422,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10424,6 +10442,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10443,6 +10462,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10462,6 +10482,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10481,6 +10502,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10500,6 +10522,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10519,6 +10542,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10538,6 +10562,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10557,6 +10582,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10576,6 +10602,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10595,6 +10622,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10614,6 +10642,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10633,6 +10662,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10652,6 +10682,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10671,6 +10702,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10690,6 +10722,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10709,6 +10742,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10728,6 +10762,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10747,6 +10782,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10766,6 +10802,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10785,6 +10822,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10804,6 +10842,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10823,6 +10862,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10842,6 +10882,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10861,6 +10902,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10880,6 +10922,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10899,6 +10942,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10919,6 +10963,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10939,6 +10984,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10959,6 +11005,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10978,6 +11025,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "шолк22",
    "W2": "шолк22"
   },
+  "материал": "ЛДСП Серый Шелк",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -10997,6 +11045,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11016,6 +11065,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11035,6 +11085,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11054,6 +11105,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11073,6 +11125,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -11092,6 +11145,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11111,6 +11165,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11130,6 +11185,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11149,6 +11205,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11168,6 +11225,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11187,6 +11245,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11206,6 +11265,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11225,6 +11285,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11244,6 +11305,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11263,6 +11325,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11282,6 +11345,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "чертеж"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -11301,6 +11365,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11320,6 +11385,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11339,6 +11405,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11358,6 +11425,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11377,6 +11445,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11396,6 +11465,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11415,6 +11485,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11434,6 +11505,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -11453,6 +11525,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11472,6 +11545,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11491,6 +11565,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11510,6 +11585,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11529,6 +11605,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11548,6 +11625,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11567,6 +11645,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11586,6 +11665,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11605,6 +11685,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11624,6 +11705,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11643,6 +11725,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11662,6 +11745,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11681,6 +11765,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11700,6 +11785,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11719,6 +11805,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11738,6 +11825,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11757,6 +11845,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11776,6 +11865,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11795,6 +11885,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11815,6 +11906,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11834,6 +11926,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -11853,6 +11946,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11872,6 +11966,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11891,6 +11986,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -11910,6 +12006,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11929,6 +12026,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11948,6 +12046,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11967,6 +12066,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -11986,6 +12086,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12005,6 +12106,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -12024,6 +12126,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12043,6 +12146,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12062,6 +12166,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12081,6 +12186,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12100,6 +12206,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12120,6 +12227,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12140,6 +12248,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12159,6 +12268,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12178,6 +12288,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12197,6 +12308,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12216,6 +12328,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12235,6 +12348,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12254,6 +12368,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12273,6 +12388,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12293,6 +12409,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12313,6 +12430,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12332,6 +12450,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12351,6 +12470,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12370,6 +12490,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12389,6 +12510,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12408,6 +12530,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12427,6 +12550,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12446,6 +12570,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12465,6 +12590,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12484,6 +12610,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12503,6 +12630,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12522,6 +12650,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12541,6 +12670,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12560,6 +12690,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12579,6 +12710,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12598,6 +12730,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12617,6 +12750,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12636,6 +12770,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12655,6 +12790,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12674,6 +12810,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12693,6 +12830,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12712,6 +12850,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12731,6 +12870,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12750,6 +12890,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12769,6 +12910,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12788,6 +12930,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12808,6 +12951,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12828,6 +12972,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12847,6 +12992,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12866,6 +13012,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12886,6 +13033,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12906,6 +13054,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12926,6 +13075,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12946,6 +13096,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12966,6 +13117,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -12986,6 +13138,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13006,6 +13159,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13026,6 +13180,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13045,6 +13200,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13064,6 +13220,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13084,6 +13241,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": null
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13104,6 +13262,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "с19",
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13123,6 +13282,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": "с19"
   },
+  "материал": "ЛДСП Серый 16 мм",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13142,6 +13302,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13161,6 +13322,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13180,6 +13342,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13199,6 +13362,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13218,6 +13382,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13237,6 +13402,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13256,6 +13422,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13275,6 +13442,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -13294,6 +13462,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13314,6 +13483,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13334,6 +13504,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13354,6 +13525,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДВП 2500",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13374,6 +13546,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13393,6 +13566,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13412,6 +13586,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13431,6 +13606,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13450,6 +13626,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13469,6 +13646,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13488,6 +13666,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13507,6 +13686,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13526,6 +13706,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13545,6 +13726,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13565,6 +13747,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13584,6 +13767,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": "чп22",
    "W2": "чп22"
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": true,
   "блоки": [
@@ -13603,6 +13787,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -13622,6 +13807,7 @@ function findAlignmentPattern(matrix, alignmentPatternQuads, topRight, topLeft, 
    "W1": null,
    "W2": null
   },
+  "материал": "ЛДСП Дуб Честер Песочный",
   "примечание": null,
   "прямоугольная": false,
   "блоки": [
@@ -13647,37 +13833,19 @@ const sizeOf = part => (part.ширина == null
 // подтверждено сверкой с бирками (ЛДСП Серый 16 мм ↔ Кромка С.19/1,
 // ЛДСП Дуб Честер Песочный ↔ ПВХ ч.п.22/1).
 const EDGES = {
-  'шолк22': {
-    label: 'Серый шёлк, ПВХ 22 мм',
-    material: 'ЛДСП Серый шёлк',
-    color: '#b3aea6',
-  },
-  'с19': {
-    label: 'Серый, 19 мм',
-    material: 'ЛДСП Серый 16 мм',
-    color: '#8e9295',
-  },
-  'чп22': {
-    label: 'Дуб Честер Песочный, ПВХ 22 мм',
-    material: 'ЛДСП Дуб Честер Песочный',
-    color: '#c2a87c',
-  },
-  'чертеж': {
-    label: 'по чертежу — смотри блок',
-    material: null,
-    color: '#d9534f',
-  },
+  'шолк22': { label: 'Серый шёлк, ПВХ 22 мм', color: '#b3aea6' },
+  'с19': { label: 'Серый, 19 мм', color: '#8e9295' },
+  'чп22': { label: 'Дуб Честер Песочный, ПВХ 22 мм', color: '#c2a87c' },
+  'чертеж': { label: 'по чертежу — смотри блок', color: '#d9534f' },
 };
 
 // L1/L2 — длинные стороны детали, W1/W2 — короткие.
 const SIDES = ['L1', 'L2', 'W1', 'W2'];
 
+// Материал приходит из штампа карты присадки. Раньше он выводился из кода
+// кромки — это врало на деталях с двумя разными кромками и без кромки вовсе.
 function materialOf(part) {
-  for (const side of SIDES) {
-    const code = part.кромка[side];
-    if (code && EDGES[code]?.material) return EDGES[code].material;
-  }
-  return null;
+  return part.материал ?? null;
 }
 
 const NUM = /\d+(?:[.,]\d+)?/g;
@@ -13786,6 +13954,7 @@ function edgeDiagram(part) {
 <div class="diagram">
   <div class="plate" style="--ar:${part.длина} / ${part.ширина}">
     ${SIDES.map(band).join('')}
+    ${SIDES.map(s => `<span class="pl pl-${s}">${s}</span>`).join('')}
     <span class="size">${esc(sizeOf(part))}</span>
   </div>
   <table class="edges"><tbody>${rows}</tbody></table>
